@@ -1,0 +1,18 @@
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">currency</th>
+      <th scope="col">description</th>
+      <th scope="col">displaySymbol</th>
+      <th scope="col">symbol</th>        
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stock of items">        
+      <td>{{stock.currency}}</td>
+      <td>{{stock.description}}</td>
+      <td>{{stock.displaySymbol}}</td>
+      <td>{{stock.symbol}}</td>       
+    </tr>      
+  </tbody>
+</table>

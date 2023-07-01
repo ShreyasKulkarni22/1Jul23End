@@ -1,0 +1,13 @@
+<a class="nav-link" routerLink="addinvestment">Add Investment</a>
+<div class="list-group">
+    <a routerLink="viewstockdetails" class="list-group-item list-group-item-action flex-column align-items-start " *ngFor="let stock of stocks">
+      <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{stock.StockSymbol}}</h5>
+        <h5 class="mb-1">{{stock.StockName}}</h5>
+        <h5 class="mb-1">{{stock.StockPrice}}</h5>
+        <h5 class="mb-1">{{stock.StockQuantity}}</h5>
+        <span><a (click)="deleteStock(stock.Stockid)">X</a></span>
+      </div>
+    </a>
+    
+  </div>

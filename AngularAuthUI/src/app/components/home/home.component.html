@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Portfolio Tracker</title>
+  
+</head>
+<body>
+  <div class="parallax-section" style="background-image: url('https://img.freepik.com/free-vector/illustration-data-analysis-graph_53876-20422.jpg?w=1060&t=st=1688125348~exp=1688125948~hmac=cef6a65732a74f34e2a97628e6b61f2ff7b529a123f2559cf1c27ce8c3da76ad');">
+    <div class="parallax-overlay">
+      <div class="parallax-content">
+        <h1 class="parallax-title">Stock Portfolio Tracker</h1>
+        <p class="parallax-subtitle">Track and manage your stock portfolio with ease</p>
+        <a href="login" class="parallax-btn">Get Started</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="features-section">
+
+    <div class="feature-item">
+
+        <video src="../../../assets/123652-financial-charts-and-statistics-on-tab-with-up-arrow.mp4" autoplay loop></video>
+            <h2 class="feature-title">Real-time Stock Data</h2>
+      <p class="feature-description">Stay updated with live stock prices and market trends.</p>
+    </div>
+    <div class="feature-item">
+        <video src="../../../assets/87440-lock.mp4" autoplay loop></video>
+      <h2 class="feature-title">Secure and Private</h2>
+      <p class="feature-description">Your financial information is protected and confidential.</p>
+    </div>
+    
+    <div class="feature-item">
+        <video src="../../../assets/68601-isometric-stock-app-animation.mp4" autoplay loop></video>
+      <h2 class="feature-title">Portfolio Management</h2>
+      <p class="feature-description">Effortlessly organize and track your stock investments.</p>
+    </div>
+  </div>
+  
+  <div class="footer">
+    &copy; 2023 Stock Portfolio Tracker. All rights reserved.
+  </div>
+  
+  <script>
+    // Add your JavaScript code here
+    function animateFeatures() {
+      var featureItems = document.querySelectorAll('.feature-item');
+      var offset = window.innerHeight * 0.8;
+      
+      featureItems.forEach(function(item) {
+        if (item.getBoundingClientRect().top < offset) {
+          item.classList.add('visible');
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', animateFeatures);
+    window.addEventListener('resize', animateFeatures);
+    animateFeatures();
+  </script>
+
+

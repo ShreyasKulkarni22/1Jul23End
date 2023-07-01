@@ -1,0 +1,41 @@
+<marquee style="background-color: rgb(48, 50, 61);">
+  <div>
+    <ng-container *ngFor="let quote of stockQuotes">
+      <span style="color: rgb(255, 255, 255);">{{ quote.symbol }}: {{ quote.currentPrice !== undefined ? ('$' + quote.currentPrice.toFixed(2)) : 'N/A' }}</span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </ng-container>
+  </div>
+</marquee>
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">Investify</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="allstocks">All Stock List</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="chart">Chart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="details">Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="news">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="yourportfolios">Your Portfolios</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+ <router-outlet></router-outlet>
+ 
+

@@ -1,0 +1,135 @@
+<!-- <div class="container my-4">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Symbol Details</h5>
+      <div class="mb-3">
+        <label for="symbolInput" class="form-label">Symbol</label>
+        <input type="text" class="form-control" id="symbolInput" [(ngModel)]="symbol" placeholder="Enter symbol">
+      </div>
+      <button class="btn btn-primary" (click)="fetchDetailsFromAPI()">Fetch Details</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="details" class="container my-4">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Company Details</h5>
+      <img [src]="details.logo" alt="Company Logo" class="img-fluid">
+      <p class="card-text">Name: {{ details.name }}</p>
+      <p class="card-text">Country: {{ details.country }}</p>
+      <p class="card-text">Exchange: {{ details.exchange }}</p>
+      <p class="card-text">Finnhub Industry: {{ details.finnhubIndustry }}</p>
+      <p class="card-text">IPO: {{ details.ipo }}</p>      
+      <p class="card-text">Web URL: <a [href]="details.weburl">{{ details.weburl }}</a></p>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- <div class="container my-4">
+  <div class="card card-xl">
+    <div class="card-body">
+      <h5 class="card-title">Symbol Details</h5>
+      <div class="mb-3">
+        <label for="symbolInput" class="form-label">Symbol</label>
+        <input type="text" class="form-control" id="symbolInput" [(ngModel)]="symbol" placeholder="Enter symbol">
+      </div>
+      <button class="btn btn-primary" (click)="fetchDetailsFromAPI()">Fetch Details</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="details" class="container my-4">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Company Details</h5>
+      <img [src]="details.logo" alt="Company Logo" class="img-fluid">
+      <p class="card-text">Name: {{ details.name }}</p>
+      <p class="card-text">Country: {{ details.country }}</p>
+      <p class="card-text">Exchange: {{ details.exchange }}</p>
+      <p class="card-text">Finnhub Industry: {{ details.finnhubIndustry }}</p>
+      <p class="card-text">IPO: {{ details.ipo }}</p>      
+      <p class="card-text">Web URL: <a [href]="details.weburl">{{ details.weburl }}</a></p>
+      <div class=" container card text-white bg-secondary mb-3" style="max-width: 25rem;">
+        <div class="card-body">
+                <h2>Current price- {{cp}}</h2>
+                <h5>High price of the day- {{h}} </h5>
+                <h5>Low price of the day- {{l}}  </h5>
+                <h5>Open price of the day- {{op}}</h5>
+                <h5>Previous close price- {{cp}} </h5>
+        </div>
+    </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="container my-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card rounded-lg shadow-lg">
+        <div class="card-body">
+          <h5 class="card-title">Symbol Details</h5>
+          <div class="mb-3">
+            <br>
+            <input type="text" class="form-control" id="symbolInput" [(ngModel)]="symbol" placeholder="Enter symbol">
+          </div>
+          <button class="btn btn-primary" (click)="fetchDetailsAndPrices()">Fetch Details and Prices</button>
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="row" style="display: flex;">
+    <div *ngIf="details && cp" class="col-6">
+      <div class="card rounded-lg shadow-lg">
+        <div class="card-body">
+          <h5 class="card-title">Company Details</h5>
+          <img [src]="details?.logo" alt="Company Logo" class="img-fluid">
+          <p class="card-text">Name: {{ details?.name }}</p>
+          <p class="card-text">Country: {{ details?.country }}</p>
+          <p class="card-text">Exchange: {{ details?.exchange }}</p>
+          <p class="card-text">Finnhub Industry: {{ details?.finnhubIndustry }}</p>
+          <p class="card-text">IPO: {{ details?.ipo }}</p>
+          <p class="card-text">Web URL: <a [href]="details?.weburl">{{ details?.weburl }}</a></p>
+        </div>
+      </div>
+    </div>
+  
+ 
+    <div *ngIf="details && cp" class="col-6">
+        <div class="card rounded-lg shadow-lg">
+          <div class="card-body">
+            <h3 class="card-title">Stock Prices</h3>
+            <h5>Current price - {{ cp }}</h5>
+            <h5>High price of the day - {{ h }}</h5>
+            <h5>Low price of the day - {{ l }}</h5>
+            <h5>Open price of the day - {{ op }}</h5>
+            <h5>Previous close price - {{ pc }}</h5>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  
+  <div *ngIf="details && cp" class="row my-4">
+    <div *ngIf="details && cp" class="row">
+      <div class="col-md-16" *ngIf="chartUrl">
+        <div class="card rounded-lg shadow-lg chart-card">
+          <div class="card-body">
+            <h5 class="card-title">Graph</h5>
+            <div class="chart-container">
+              <iframe [src]="chartUrl" frameborder="0" class="chart-frame"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  
+</div>
+
+

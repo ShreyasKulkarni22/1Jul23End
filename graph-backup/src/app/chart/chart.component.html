@@ -1,0 +1,27 @@
+<div class="container my-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card rounded-lg shadow-lg">
+        <div class="card-body">
+          <h5 class="card-title">Symbol Input</h5>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="symbolInput" [(ngModel)]="symbol" placeholder="Enter Symbol">
+          </div>
+          <button class="btn btn-primary" (click)="getChart()">Get Chart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" *ngIf="chartUrl">
+      <div class="card rounded-lg shadow-lg chart-card">
+        <div class="card-body">
+          <h5 class="card-title">Graph</h5>
+          <div class="chart-container">
+            <iframe [src]="chartUrl" frameborder="0" class="chart-frame"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
